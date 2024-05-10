@@ -11,10 +11,6 @@ import VrtcalSDK
 
 class VRTInterstitialCustomEventAlwaysFails: VRTAbstractInterstitialCustomEvent {
     override func loadInterstitialAd() {
-        let vrtError = VRTError(
-            vrtErrorCode: .unknown,
-            message: "VRTInterstitialCustomEventAlwaysFails"
-        )
-        customEventLoadDelegate?.customEventFailedToLoad(vrtError: vrtError)
+        customEventLoadDelegate?.customEventFailedToLoadWithError(VRTError(code: "code", message: "mesage"))
     }
 }

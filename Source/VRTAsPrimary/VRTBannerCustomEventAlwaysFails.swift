@@ -9,13 +9,8 @@
 
 import VrtcalSDK
 
-class VRTBannerCustomEventAlwaysFails: VRTAbstractBannerCustomEvent {
-    override func loadBannerAd() {
-        let vrtError = VRTError(
-            vrtErrorCode: .unknown,
-            message: "VRTBannerCustomEventAlwaysFails"
-        )
-
-        customEventLoadDelegate?.customEventFailedToLoad(vrtError: vrtError)
+@objc public class VRTBannerCustomEventAlwaysFails: VRTAbstractBannerCustomEvent {
+    override public func loadBannerAd() {
+        customEventLoadDelegate?.customEventFailedToLoadWithError(VRTError(code: "code", message: "mesage"))
     }
 }
