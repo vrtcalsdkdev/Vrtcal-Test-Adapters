@@ -15,7 +15,6 @@ Pod::Spec.new do |s|
     s.platform = :ios
     s.ios.deployment_target = '11.0'
 
-    s.dependency 'TapjoySDK'
     s.dependency 'VrtcalSDK'
     s.pod_target_xcconfig = {
         "VALID_ARCHS[sdk=iphoneos*]" => "arm64 armv7",
